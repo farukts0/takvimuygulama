@@ -1,70 +1,11 @@
-# Getting Started with Create React App
+# takvim uygulaması
+Adım adım takvim uygulamamızı nasıl ortaya çıkarttığımızı açıklayalım; 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1.İlk olarak, React kütüphanesini ve `useState` adlı bir hook'u içe aktarırız. Bu bize React bileşenleri oluşturmak ve bileşen durumunu kullanmak için gerekli olan araçları sağlar.
+2. Ardından, `CalendarApp` adında bir fonksiyonel bileşen tanımlarız. Bu bileşen, takvim uygulamasını temsil eder.
+3. Bileşen içinde, `date` ve `setDate` adlı iki değişken tanımlarız. `date`, mevcut tarihi tutan bir durum değişkenidir ve `setDate`, tarih değişikliklerini güncellemek için kullanılan bir işlevdir. Başlangıçta, `date` değişkenine `new Date()` ile mevcut tarih atanır.
+4. `handlePrevMonth` adlı bir işlev tanımlarız. Bu işlev, önceki ayı işlemek için kullanılır. İçinde, `prevDate` adlı bir parametre alır ve `prevDate`'in bir önceki ayının başlangıç tarihini hesaplar. Bu yeni tarih, `setDate` işlevi aracılığıyla `date` değişkenine atanır.
+5. `handleNextMonth` adlı bir işlev tanımlarız. Bu işlev, sonraki ayı işlemek için kullanılır. İçinde, `prevDate` adlı bir parametre alır ve `prevDate`'in bir sonraki ayının başlangıç tarihini hesaplar. Bu yeni tarih, `setDate` işlevi aracılığıyla `date` değişkenine atanır.
+6. `renderCalendar` adlı bir işlev tanımlarız. Bu işlev, takvimin günlerini oluşturmak için kullanılır. İçinde, mevcut yılın ve ayın bilgilerini alırız. Daha sonra, ayın ilk gününün haftanın hangi gününe denk geldiğini ve ayın kaç gün olduğunu hesaplarız. Bu bilgileri kullanarak, takvimdeki boş günleri ve ayın günlerini oluşturan JSX kodunu döndürürüz.
+7. Son olarak, bileşenin JSX kodunu oluştururuz. Bu kod, takvim uygulamasının görüntüsünü temsil eder. İçinde, `handlePrevMonth` ve `handleNextMonth` işlevlerinin tetiklendiği önceki ve sonraki ay butonları, mevcut ayın başlığını gösteren bir başlık ve `renderCalendar` işlevinin döndürdüğü takvim günlerini içeren bir takvim alanı bulunur.
+8. Bileşeni `export default` ifadesiyle dışa aktarırız, böylece başka dosyalarda kullanabiliriz.
