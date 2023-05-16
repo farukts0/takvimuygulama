@@ -1,5 +1,5 @@
 # takvim uygulaması
-Adım adım takvim uygulamamızı nasıl ortaya çıkarttığımızı açıklayalım; 
+Adım adım takvim uygulamamızı nasıl ortaya çıkarttığımızı açıklayalım ; 
 
 1.İlk olarak, React kütüphanesini ve `useState` adlı bir hook'u içe aktarırız. Bu bize React bileşenleri oluşturmak ve bileşen durumunu kullanmak için gerekli olan araçları sağlar.
 2. Ardından, `CalendarApp` adında bir fonksiyonel bileşen tanımlarız. Bu bileşen, takvim uygulamasını temsil eder.
